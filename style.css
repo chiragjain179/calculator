@@ -1,42 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Sacramento&display=swap');
-html body{
-    height: 100%;
-    width: 100%;
-    font-family: 'Caveat', cursive;
-    font-family: 'Libre Baskerville', serif;
-    font-family: 'Sacramento', cursive;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    background-color: #232427;
+}
+.container{
+    display: flex;
     flex-direction: column;
+    border-radius: 30px;
     padding: 10px;
-    margin: 10px;
-    background: linear-gradient(300deg, #179ecb, #c45566, #cb7165);
-    background-size: 180% 180%;
+    width: 320px;
+    background: #232427;
+    box-shadow: 20px 20px 50px #00000077;
 }
 .row{
+    display: flex;
     margin: 10px 0px;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 20px 20px 50px #00000077,
-    inset 20px 20px 50px #c107071a;
 }
 .button{
-    margin: 0px 5px;
-    border: 2px solid ;
-    border-radius: 10px;
-    background-color: #c1c1c1;
+    width: 60px;
+    height: 60px;
+    margin: 4px;
+    background: linear-gradient(135deg, #2c2e33, #202124);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 500;
     cursor: pointer;
-    padding: 10px;
-    width: 65px;   
+    transition: transform 0.1s, filter 0.1s;
 }
+
+.button:hover {
+    filter: brightness(1.2);
+}
+
+.button:active {
+    transform: scale(0.95);
+    box-shadow: inset 3px 3px 10px rgba(0,0,0,0.5);
+}
+
+.clear-btn {
+    background: linear-gradient(135deg, #ff9500, #ff5e00);
+    color: white;
+}
+
+.equal-btn {
+    background: linear-gradient(135deg, #ff9500, #ff5e00);
+    color: white;
+}
+
 .input{
-    border: 3px solid;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
-    width: 190px;
-    background-color: #ffffff5c;  
+    width: 50px;
+    flex: 1;
+    height: 60px;
+    margin: 4px;
+    border: none;
+    outline: none;
+    background-color: #292b2f;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    color: #fff;
+    text-align: right;
+    padding-right: 15px;
 }
