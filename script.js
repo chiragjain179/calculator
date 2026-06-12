@@ -1,7 +1,7 @@
 let string = "";
 const display = document.querySelector('input');
 const buttons = document.querySelectorAll('.button');
-const operators = ['+', '-', 'x', '/'];
+const operators = ['+', '-', '*', '/'];
 
 Array.from(buttons).forEach((button) => {
     button.addEventListener('click', (e) => {
@@ -35,7 +35,7 @@ Array.from(buttons).forEach((button) => {
 
             // Prevent multiple decimals in the same number
             if (buttonText === '.') {
-                const parts = string.split(/[\+\-\x\/]/);
+                const parts = string.split(/[\+\-\*\/]/);
                 const lastPart = parts[parts.length - 1];
                 if (lastPart.includes('.')) return;
             }
